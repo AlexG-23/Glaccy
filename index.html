@@ -9,76 +9,87 @@
 </head>
 <body>
   <header class="page-header">
-    <a href="#" class="main-logo">
-        <span class="visually-hidden">Логотип Глэйси</span>
-    </a>
-    <nav class="main-navigation">
-      <ul class="navigation-list">
-        <li class="navigation-item">
-          <a href="#" class="navigation-link">Каталог</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#" class="navigation-link">Доставка и оплата</a>
-        </li>
-        <li class="navigation-item">
-          <a href="#" class="navigation-link">О компании</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="user-navigation">
-      <ul class="navigation-list user-navigation-list">
-        <li class="navigation-item user-navigation-item">
-          <a href="tel:88005558628" class="user-navigetion-link">+7 800 555-86-28</a>
-        </li>
-        <li class="navigation-item user-navigation-item">
-          <button class="user-nav-btn" type="button">
-            <span class="visually-hidden">Поиск.</span>
-          </button>
-        </li>
-        <li class="navigation-item user-navigation-item">
-          <button class="user-nav-btn" type="button">
-            <span>Вход</span>
-          </button>
-        </li>
-        <li class="navigation-item user-navigation-item">
-          <button class="user-nav-btn" type="button">
-            <span>Пусто</span>
-            <span class="visually-hidden">Корзина.</span>
-          </button>
-        </li>
-      </ul>
+    <div class="container">
+      <a href="#" class="navigation-item main-logo">
+          <span class="visually-hidden">Логотип Глэйси</span>
+      </a>
+      <nav class="main-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Каталог</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Доставка и оплата</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">О компании</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-navigation">
+        <ul class="navigation-list user-navigation-list">
+          <li class="navigation-item user-navigation-item">
+            <a href="tel:88005558628" class="user-navigation-link">+7 800 555-86-28</a>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn search-btn" type="button">
+              <span class="visually-hidden">Поиск.</span>
+            </button>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn login-btn" type="button">
+              <span>Вход</span>
+            </button>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn cart-btn" type="button">
+              <span>Пусто</span>
+              <span class="visually-hidden">Корзина.</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Магазин мороженого "Глэйси".</h1>
-    <div class="container">
-      <section class="slider-section">
-        <div class="slider-item slide-active">
-          <h2 class="slider-title">Нежный пломбир с клубничным джемом</h1>
-          <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-          <a href="#" class="slider-order-btn">Заказать</a>
-          <div class="slider-image-wrapper">
-            <img src="" alt="Клубничный пломбир." class="slider-image">
-          </div>
-        </div>
+    
+    <section class="slider-section">
+      <div class="container">
+        <ol class="slider-list">
+          <li class="slider-item slide-active">
+            <div class="slide-content-wrapper">
+              <h2 class="slider-title">Нежный пломбир с клубничным джемом</h1>
+              <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+              <a href="#" class="slider-order-btn">Заказать</a>
+            </div>
+            <div class="slider-image-wrapper">
+              <img src="images/slider-image-1.png" width="306" height="507" alt="Клубничный пломбир." class="slider-image">
+            </div>
+          </li>
 
-        <div class="slider-item">
-          <h2 class="slider-title">Сливочное мороженое со вкусом банана</h1>
-          <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-          <a href="#" class="slider-order-btn">Заказать</a>
-          <div class="slider-image-wrapper">
-            <img src="" alt="Банановый пломбир." class="slider-image">
-          </div>
-        </div>
+          <li class="slider-item">
+            <div class="slide-content-wrapper">
+              <h2 class="slider-title">Сливочное мороженое со вкусом банана</h1>
+              <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+              <a href="#" class="slider-order-btn">Заказать</a>
+            </div>
+            <div class="slider-image-wrapper">
+              <img src="" alt="Банановый пломбир." class="slider-image">
+            </div>
+          </li>
 
-        <div class="slider-item">
-          <h2 class="slider-title">Карамельный пломбир с маршмеллоу</h1>
-          <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-          <a href="#" class="slider-order-btn">Заказать</a>
-          <div class="slider-image-wrapper">
-            <img src="" alt="Карамельный пломбир." class="slider-image">
-          </div>
-        </div>
+          <li class="slider-item">
+            <div class="slide-content-wrapper">
+              <h2 class="slider-title">Карамельный пломбир с маршмеллоу</h1>
+              <p class="slider-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+              <a href="#" class="slider-order-btn">Заказать</a>
+            </div>
+            <div class="slider-image-wrapper">
+              <img src="" alt="Карамельный пломбир." class="slider-image">
+            </div>
+          </li>
+        </ol>
 
         <div class="slider-buttons-wrapper">
           <button class="slider-btn" type="button">
@@ -92,7 +103,7 @@
         <div class="slider-pagination">
           <ul class="slider-pagination-list">
             <li class="slider-pagination-item">
-              <button class="slider-pagination-btn" type="button">
+              <button class="slider-pagination-btn slider-pagination-active" type="button">
                 <span class="visually-hidden">Первый слайд.</span>
               </button>
             </li>
@@ -125,7 +136,8 @@
             </a>
           </li>
         </ul>
-      </section>
+      </div>
+    </section>
 
       <section class="gifts-section">
         <h3 class="section-title">Заказывайте мороженое и получайте подарки!</h3>
