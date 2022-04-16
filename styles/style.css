@@ -51,7 +51,18 @@ body {
   color: var(--main-font-color);
   font-weight: 400;
   font-size: 16px;
-  background-color: #FEAFC3;
+}
+
+.body-first-slide {
+  background-color: #feafc3;
+}
+
+.body-second-slide {
+  background-color: #69a9ff;
+}
+
+.body-third-slide {
+  background-color: #fcc850;
 }
 
 .container {
@@ -101,6 +112,7 @@ body {
 .navigation-list {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 
 .navigation-item:not(:last-of-type) {
@@ -111,6 +123,7 @@ body {
   text-decoration: none;
   color: var(--main-font-color);
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .user-navigation {
@@ -128,6 +141,7 @@ body {
   text-decoration: none;
   font-weight: 700;
   color: var(--main-font-color);
+  white-space: nowrap;
 }
 
 .user-nav-btn {
@@ -454,39 +468,40 @@ body {
   text-align: center;
 }
 
-.popular-item::before {
+.product-title::before {
   content: "";
   display: block;
   width: 168px;
   height: 168px;
   position: absolute;
   top: -90px;
-  right: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   background-size: 168px 168px;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.popular-item:nth-child(1)::before {
-  background-image: url("../images/popular-1.png");
-}
-
-.popular-item:nth-child(2)::before {
-  background-image: url("../images/popular-2.png");
-}
-
-.popular-item:nth-child(3)::before {
-  background-image: url("../images/popular-3.png");
-}
-
-.popular-item:nth-child(4)::before {
-  background-image: url("../images/popular-4.png");
 }
 
 .product-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+}
+
+.popular-item:nth-child(1) .product-title::before {
+  background-image: url("../images/popular-1.png");
+}
+
+.popular-item:nth-child(2) .product-title::before {
+  background-image: url("../images/popular-2.png");
+}
+
+.popular-item:nth-child(3) .product-title::before {
+  background-image: url("../images/popular-3.png");
+}
+
+.popular-item:nth-child(4) .product-title::before {
+  background-image: url("../images/popular-4.png");
 }
 
 .product-description {

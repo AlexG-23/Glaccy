@@ -7,14 +7,16 @@
   <title>Gllacy</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body class="body-first-slide">
   <header class="page-header">
     <div class="container">
-      <a href="#" class="navigation-item main-logo">
-          <span class="visually-hidden">Логотип Глэйси</span>
-      </a>
       <nav class="main-navigation">
         <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="#" class="main-logo">
+                <span class="visually-hidden">Логотип Глэйси</span>
+            </a>
+          </li>
           <li class="navigation-item">
             <a href="#" class="navigation-link">Каталог</a>
           </li>
@@ -350,6 +352,8 @@
 
     var firstLittleSlide = document.querySelector(".second-slide");
     var secondLittleSlide = document.querySelector(".third-slide");
+
+    var bodyBackground = document.querySelector(".body-first-slide");
     
     function nextSlide() {
       if (firstSlide.classList.contains("slide-active")) {
@@ -364,6 +368,10 @@
 
         firstPagination.classList.remove("slider-pagination-active");
         secondPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-first-slide");
+        bodyBackground.classList.add("body-second-slide");
+        
       } 
       else if (secondSlide.classList.contains("slide-active")) {
         secondSlide.classList.remove("slide-active");
@@ -377,6 +385,9 @@
 
         secondPagination.classList.remove("slider-pagination-active");
         thirdPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-second-slide");
+        bodyBackground.classList.add("body-third-slide");
       } 
       else {
         thirdSlide.classList.remove("slide-active");
@@ -390,6 +401,9 @@
 
         thirdPagination.classList.remove("slider-pagination-active");
         firstPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-third-slide");
+        bodyBackground.classList.add("body-first-slide");
       }
     }
 
@@ -406,6 +420,9 @@
 
         firstPagination.classList.remove("slider-pagination-active");
         thirdPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-first-slide");
+        bodyBackground.classList.add("body-third-slide");
       } 
       else if (secondSlide.classList.contains("slide-active")) {
         secondSlide.classList.remove("slide-active");
@@ -419,6 +436,9 @@
 
         secondPagination.classList.remove("slider-pagination-active");
         firstPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-second-slide");
+        bodyBackground.classList.add("body-first-slide");
       } 
       else {
         thirdSlide.classList.remove("slide-active");
@@ -432,6 +452,9 @@
 
         thirdPagination.classList.remove("slider-pagination-active");
         secondPagination.classList.add("slider-pagination-active");
+
+        bodyBackground.classList.remove("body-third-slide");
+        bodyBackground.classList.add("body-second-slide");
       }
 
     }
