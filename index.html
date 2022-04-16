@@ -75,7 +75,7 @@
               <a href="#" class="button slider-order-btn">Заказать</a>
             </div>
             <div class="slider-image-wrapper">
-              <img src="" alt="Банановый пломбир." class="slider-image">
+              <img src="images/slider-image-2.png" width="306" height="507" alt="Банановый пломбир." class="slider-image">
             </div>
           </li>
 
@@ -86,7 +86,7 @@
               <a href="#" class="button slider-order-btn">Заказать</a>
             </div>
             <div class="slider-image-wrapper">
-              <img src="" alt="Карамельный пломбир." class="slider-image">
+              <img src="images/slider-image-3.png" width="306" height="507" alt="Карамельный пломбир." class="slider-image">
             </div>
           </li>
         </ol>
@@ -101,11 +101,11 @@
         </div>        
 
         <div class="slider-buttons-wrapper">
-          <button class="slider-btn" type="button">
-            <span class="visually-hidden">Следующий товар.</span>
-          </button>
-          <button class="slider-btn" type="button">
+          <button class="slider-btn" type="button" onclick="prevSlide()">
             <span class="visually-hidden">Предыдущий товар.</span>
+          </button>
+          <button class="slider-btn" type="button" onclick="nextSlide()">
+            <span class="visually-hidden">Следующий товар.</span>
           </button>
         </div>
 
@@ -170,34 +170,46 @@
           <li class="popular-item">
             <h4 class="product-title">Малинка</h4>
             <p class="product-description">Сливочное мороженое с малиновым джемом</p>
-            <span class="product-price">310 ₽/кг</span>
-            <button class="to-cart-btn" type="button">
-              <span class="visually-hidden">Добавить в корзину.</span>
-            </button>
+            <div class="price-btn-wrapper">
+              <span class="product-price">310 ₽/кг</span>
+              <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Добавить в корзину.</span>
+              </button>
+            </div>
           </li>
           <li class="popular-item">
             <h4 class="product-title">Фисташка</h4>
             <p class="product-description">Фисташковый пломбир с кусочками шоколада</p>
-            <span class="product-price">340 ₽/кг</span>
-            <button class="to-cart-btn" type="button">
-              <span class="visually-hidden">Добавить в корзину.</span>
-            </button>
+            <div class="price-btn-wrapper">
+              <span class="product-price">340 ₽/кг</span>
+              <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Добавить в корзину.</span>
+              </button>
+            </div>
           </li>
           <li class="popular-item">
             <h4 class="product-title">Черника</h4>
             <p class="product-description">Крем-брюле с черничным джемом</p>
-            <span class="product-price">330 ₽/кг</span>
-            <button class="to-cart-btn" type="button">
-              <span class="visually-hidden">Добавить в корзину.</span>
-            </button>
+            <div class="price-btn-wrapper">
+              <span class="product-price">330 ₽/кг</span>
+              <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Добавить в корзину.</span>
+              </button>
+            </div>
           </li>
           <li class="popular-item">
             <h4 class="product-title">Бабл-гам</h4>
             <p class="product-description">Ванильный пломбир со сладкой посыпкой</p>
-            <span class="product-price">320 ₽/кг</span>
-            <button class="to-cart-btn" type="button">
-              <span class="visually-hidden">Добавить в корзину.</span>
-            </button>
+            <div class="price-btn-wrapper">
+              <span class="product-price">320 ₽/кг</span>
+              <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Добавить в корзину.</span>
+              </button>
+            </div>
           </li>
         </ul>
       </section>
@@ -326,5 +338,104 @@
       </div>
     </div>
   </footer>
+  <script>
+    var firstSlide = document.querySelector(".slider-item:nth-child(1)");
+    var secondSlide = document.querySelector(".slider-item:nth-child(2)");
+    var thirdSlide = document.querySelector(".slider-item:nth-child(3)");
+
+    var firstPagination = document.querySelector(".slider-pagination-item:nth-child(1) .slider-pagination-btn");
+    var secondPagination = document.querySelector(".slider-pagination-item:nth-child(2) .slider-pagination-btn");
+    var thirdPagination = document.querySelector(".slider-pagination-item:nth-child(3) .slider-pagination-btn");
+    
+
+    var firstLittleSlide = document.querySelector(".second-slide");
+    var secondLittleSlide = document.querySelector(".third-slide");
+    
+    function nextSlide() {
+      if (firstSlide.classList.contains("slide-active")) {
+        firstSlide.classList.remove("slide-active");
+        secondSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("second-slide");
+        firstLittleSlide.classList.add("third-slide");
+
+        secondLittleSlide.classList.remove("third-slide");
+        secondLittleSlide.classList.add("first-slide");
+
+        firstPagination.classList.remove("slider-pagination-active");
+        secondPagination.classList.add("slider-pagination-active");
+      } 
+      else if (secondSlide.classList.contains("slide-active")) {
+        secondSlide.classList.remove("slide-active");
+        thirdSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("third-slide");
+        firstLittleSlide.classList.add("first-slide");
+
+        secondLittleSlide.classList.remove("first-slide");
+        secondLittleSlide.classList.add("second-slide");
+
+        secondPagination.classList.remove("slider-pagination-active");
+        thirdPagination.classList.add("slider-pagination-active");
+      } 
+      else {
+        thirdSlide.classList.remove("slide-active");
+        firstSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("first-slide");
+        firstLittleSlide.classList.add("second-slide");
+
+        secondLittleSlide.classList.remove("second-slide");
+        secondLittleSlide.classList.add("third-slide");
+
+        thirdPagination.classList.remove("slider-pagination-active");
+        firstPagination.classList.add("slider-pagination-active");
+      }
+    }
+
+    function prevSlide() {
+      if (firstSlide.classList.contains("slide-active")) {
+        firstSlide.classList.remove("slide-active");
+        thirdSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("second-slide");
+        firstLittleSlide.classList.add("first-slide");
+
+        secondLittleSlide.classList.remove("third-slide");
+        secondLittleSlide.classList.add("second-slide");
+
+        firstPagination.classList.remove("slider-pagination-active");
+        thirdPagination.classList.add("slider-pagination-active");
+      } 
+      else if (secondSlide.classList.contains("slide-active")) {
+        secondSlide.classList.remove("slide-active");
+        firstSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("third-slide");
+        firstLittleSlide.classList.add("second-slide");
+
+        secondLittleSlide.classList.remove("first-slide");
+        secondLittleSlide.classList.add("third-slide");
+
+        secondPagination.classList.remove("slider-pagination-active");
+        firstPagination.classList.add("slider-pagination-active");
+      } 
+      else {
+        thirdSlide.classList.remove("slide-active");
+        secondSlide.classList.add("slide-active");
+
+        firstLittleSlide.classList.remove("first-slide");
+        firstLittleSlide.classList.add("third-slide");
+
+        secondLittleSlide.classList.remove("second-slide");
+        secondLittleSlide.classList.add("first-slide");
+
+        thirdPagination.classList.remove("slider-pagination-active");
+        secondPagination.classList.add("slider-pagination-active");
+      }
+
+    }
+
+  </script>
 </body>
 </html>
