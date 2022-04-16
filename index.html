@@ -114,17 +114,17 @@
         <div class="slider-pagination">
           <ul class="slider-pagination-list">
             <li class="slider-pagination-item">
-              <button class="slider-pagination-btn slider-pagination-active" type="button">
+              <button class="slider-pagination-btn slider-pagination-active" type="button" onclick="paginationFirst()">
                 <span class="visually-hidden">Первый слайд.</span>
               </button>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-btn" type="button">
+              <button class="slider-pagination-btn" type="button" onclick="paginationSecond()">
                 <span class="visually-hidden">Второй слайд.</span>
               </button>
             </li>
             <li class="slider-pagination-item">
-              <button class="slider-pagination-btn" type="button">
+              <button class="slider-pagination-btn" type="button" onclick="paginationThird()">
                 <span class="visually-hidden">Третий слайд.</span>
               </button>
             </li>
@@ -340,125 +340,6 @@
       </div>
     </div>
   </footer>
-  <script>
-    var firstSlide = document.querySelector(".slider-item:nth-child(1)");
-    var secondSlide = document.querySelector(".slider-item:nth-child(2)");
-    var thirdSlide = document.querySelector(".slider-item:nth-child(3)");
-
-    var firstPagination = document.querySelector(".slider-pagination-item:nth-child(1) .slider-pagination-btn");
-    var secondPagination = document.querySelector(".slider-pagination-item:nth-child(2) .slider-pagination-btn");
-    var thirdPagination = document.querySelector(".slider-pagination-item:nth-child(3) .slider-pagination-btn");
-    
-
-    var firstLittleSlide = document.querySelector(".second-slide");
-    var secondLittleSlide = document.querySelector(".third-slide");
-
-    var bodyBackground = document.querySelector(".body-first-slide");
-    
-    function nextSlide() {
-      if (firstSlide.classList.contains("slide-active")) {
-        firstSlide.classList.remove("slide-active");
-        secondSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("second-slide");
-        firstLittleSlide.classList.add("third-slide");
-
-        secondLittleSlide.classList.remove("third-slide");
-        secondLittleSlide.classList.add("first-slide");
-
-        firstPagination.classList.remove("slider-pagination-active");
-        secondPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-first-slide");
-        bodyBackground.classList.add("body-second-slide");
-        
-      } 
-      else if (secondSlide.classList.contains("slide-active")) {
-        secondSlide.classList.remove("slide-active");
-        thirdSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("third-slide");
-        firstLittleSlide.classList.add("first-slide");
-
-        secondLittleSlide.classList.remove("first-slide");
-        secondLittleSlide.classList.add("second-slide");
-
-        secondPagination.classList.remove("slider-pagination-active");
-        thirdPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-second-slide");
-        bodyBackground.classList.add("body-third-slide");
-      } 
-      else {
-        thirdSlide.classList.remove("slide-active");
-        firstSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("first-slide");
-        firstLittleSlide.classList.add("second-slide");
-
-        secondLittleSlide.classList.remove("second-slide");
-        secondLittleSlide.classList.add("third-slide");
-
-        thirdPagination.classList.remove("slider-pagination-active");
-        firstPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-third-slide");
-        bodyBackground.classList.add("body-first-slide");
-      }
-    }
-
-    function prevSlide() {
-      if (firstSlide.classList.contains("slide-active")) {
-        firstSlide.classList.remove("slide-active");
-        thirdSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("second-slide");
-        firstLittleSlide.classList.add("first-slide");
-
-        secondLittleSlide.classList.remove("third-slide");
-        secondLittleSlide.classList.add("second-slide");
-
-        firstPagination.classList.remove("slider-pagination-active");
-        thirdPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-first-slide");
-        bodyBackground.classList.add("body-third-slide");
-      } 
-      else if (secondSlide.classList.contains("slide-active")) {
-        secondSlide.classList.remove("slide-active");
-        firstSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("third-slide");
-        firstLittleSlide.classList.add("second-slide");
-
-        secondLittleSlide.classList.remove("first-slide");
-        secondLittleSlide.classList.add("third-slide");
-
-        secondPagination.classList.remove("slider-pagination-active");
-        firstPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-second-slide");
-        bodyBackground.classList.add("body-first-slide");
-      } 
-      else {
-        thirdSlide.classList.remove("slide-active");
-        secondSlide.classList.add("slide-active");
-
-        firstLittleSlide.classList.remove("first-slide");
-        firstLittleSlide.classList.add("third-slide");
-
-        secondLittleSlide.classList.remove("second-slide");
-        secondLittleSlide.classList.add("first-slide");
-
-        thirdPagination.classList.remove("slider-pagination-active");
-        secondPagination.classList.add("slider-pagination-active");
-
-        bodyBackground.classList.remove("body-third-slide");
-        bodyBackground.classList.add("body-second-slide");
-      }
-
-    }
-
-  </script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
