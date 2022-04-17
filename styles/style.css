@@ -378,17 +378,26 @@ body {
 }
 
 .section-title {
+  margin: 40px auto;
+  padding: 0;
   font-size: 32px;
   line-height: 46px;
   text-align: center;
 }
 
+.gifts-section {
+  margin: 0 auto;
+}
+
 .gifts-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  grid-template-columns: repeat(auto-fit, 570px);
   gap: 30px;
   list-style-type: none;
   justify-items: center;
+  justify-content: center;
 }
 
 .gifts-item {
@@ -409,6 +418,7 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 85%;
+  transition: 0.4s;
 }
 
 .gifts-item:first-of-type::after {
@@ -444,23 +454,31 @@ body {
   font-weight: 700;
 }
 
+.popular-products-section {
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
 .popular-products-section .section-title {
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .popular-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
   list-style-type: none;
+  justify-items: center;
 }
 
 .popular-item {
   position: relative;
   max-width: 270px;
-  min-width: 190px;
   background-color: #fcfcfc;
   border-radius: 8px;
+  margin-top: 80px;
   padding-top: 70px;
   padding-left: 40px;
   padding-right: 40px;
@@ -564,4 +582,103 @@ body {
 
 .to-cart-btn:disabled svg {
   fill: var(--black);
+}
+
+.about-section {
+  margin: 0 auto;
+  max-width: 1170px;
+  padding: 24px;
+  background-image: url("../images/waffle-bg.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 80%;
+  border-radius: 16px;
+}
+
+.about-section .container {
+  padding: 56px 40px;
+  background-color: var(--white);
+  border-radius: 16px;
+}
+
+.about-section .section-title {
+  margin-bottom: 50px;
+}
+
+.about-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 480px));
+  grid-template-rows: repeat(auto-fill, 1fr);
+  row-gap: 40px;
+  column-gap: 10px;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.about-item p {
+  display: inline-block;
+  margin: 0;
+  margin-left: 60px;
+  margin-top: -30px;
+  max-width: 440px;
+}
+
+.about-item::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: initial;
+  border: 2px solid var(--main-font-color);
+  border-radius: 50%;
+}
+
+.about-item:nth-child(1)::before {
+  background-image: url("../images/about-1.svg");
+}
+
+.about-item:nth-child(2)::before {
+  background-image: url("../images/about-2.svg");
+}
+
+.about-item:nth-child(3)::before {
+  background-image: url("../images/about-3.svg");
+}
+
+.about-item:nth-child(4)::before {
+  background-image: url("../images/about-4.svg");
+}
+
+@media (max-width: 800px) {
+  .gifts-item:first-of-type::after {
+    width: 111px;
+  }
+
+  .gifts-item:last-of-type::after {
+    width: 142px;
+  }
+
+  .gift-description {
+    max-width: 200px;
+  }
+
+  .gifts-item {
+    min-width: 360px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  .about-section .section-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto 30px;
+  }
 }
