@@ -192,6 +192,7 @@ body {
   top: 50px;
   left: 0;
   display: none;
+  padding: 20px 40px;
   flex-direction: column;
   list-style-type: none;
   z-index: 1;
