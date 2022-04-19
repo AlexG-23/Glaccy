@@ -1055,6 +1055,7 @@ body {
 
   .slide-content-wrapper {
     grid-row: 2 / 3;
+    margin-bottom: 40px;
   }
 
   .slider-image-wrapper {
@@ -1092,6 +1093,10 @@ body {
 }
 
 @media (max-width:460px) {
+  .slider-pagination-list {
+    bottom: -55px;
+  }
+
   .contacts-address .button {
     padding: 15px 18px;
   }
