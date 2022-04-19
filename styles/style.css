@@ -791,6 +791,8 @@ body {
   margin-bottom: 80px;
   background-image: url("../images/delivery-bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
   border-radius: 16px;
 }
 
@@ -1018,7 +1020,6 @@ body {
   }
 
   .delivery-section .section-title {
-    margin: 0 auto;
     padding: 0;
     grid-row: 1 / 2;
   }
