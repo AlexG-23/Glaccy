@@ -28,6 +28,29 @@
           </li>
         </ul>
       </nav>
+      <div class="burger-nav">
+        <button class="burger-btn" type="button" onclick="burgerOpen()">
+          <span class="burger-item"></span>
+          <span class="burger-item"></span>
+          <span class="burger-item"></span>
+        </button>
+        <ul class="burger-list">
+          <li class="navigation-item">
+            <a href="#" class="main-logo">
+                <span class="visually-hidden">Логотип Глэйси</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html" class="navigation-link">Каталог</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Доставка и оплата</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">О компании</a>
+          </li>
+        </ul>
+      </div>
       <div class="user-navigation">
         <ul class="navigation-list user-navigation-list">
           <li class="navigation-item user-navigation-item">
@@ -260,28 +283,28 @@
         <p class="delivery-description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         <form action="https://echo.htmlacademy.ru/" class="delivery-form">
           <fieldset class="delivery-fields">
-            <legend>Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</legend>
+            <legend>Укажите адрес и дату доставки, и мы свяжемся<br> с вами, чтобы подтвердить заказ.</legend>
             <ul class="filters-list">
               <li class="filter-item">
                 <label for="date">
                   Дата
-                  <input type="text" class="delivery-input" placeholder="01.04.2020" required>
+                  <input id="date" type="text" class="delivery-input" placeholder="01.04.2020" required>
                 </label>
               </li>
               <li class="filter-item">
                 <label for="phone">
                   Телефон
-                  <input type="text" class="delivery-input" placeholder="+7 800 999-00-00" required>
+                  <input id="phone" type="text" class="delivery-input" placeholder="+7 800 999-00-00" required>
                 </label>
               </li>
               <li class="filter-item">
                 <label for="address">
                   Адрес
-                  <input type="text" class="delivery-input" placeholder="ул. Большая Конюшенная, 19/8" required>
+                  <input id="address" type="text" class="delivery-input" placeholder="ул. Большая Конюшенная, 19/8" required>
                 </label>
               </li>
             </ul>
-            <button class="button pink-btn" type="submit">Отправить</button>
+            <button class="button" type="submit">Отправить</button>
           </fieldset>
         </form>
       </section>
@@ -291,9 +314,9 @@
           <p class="contacts-description">Адрес главного офиса и офлайн-магазина:</p>
           <p class="contacts-content">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
           <p class="contacts-description">Для заказов по телефону:</p>
-          <a href="tel:88128121212" class="contacts-phone">+7 (812) 812-12-12</a>
+          <a href="tel:88128121212" class="contacts-content">+7 (812) 812-12-12</a>
           <span>(с 10 до 20 ежедневно)</span>
-          <button class="button pink-btn" type="submit">Форма обратной связи</button>
+          <button class="button" type="submit">Форма обратной связи</button>
         </address>
       </section>
     </div>

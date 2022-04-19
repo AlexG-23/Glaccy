@@ -184,3 +184,9 @@ function paginationThird() {
   secondLittleSlide.classList.remove("first-slide");
   secondLittleSlide.classList.add("second-slide");
 }
+
+var burgerMenu = document.querySelector(".burger-list");
+
+function burgerOpen() {
+  burgerMenu.classList.toggle("burger-open");
+}
