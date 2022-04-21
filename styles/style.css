@@ -1129,18 +1129,15 @@ body {
     display: none;
   }
 
-  .navigation-item:not(:last-of-type) {
-    margin-bottom: 10px;
-  }
-
   .burger-btn {
     display: flex;
   }
 
   .main-logo {
     position: absolute;
-    top: 35%;
+    top: 50%;
     right: 10%;
+    transform: translateY(-50%);
   }
 
   .user-navigation-list {
@@ -1150,6 +1147,10 @@ body {
 
   .user-navigation-link {
     display: none;
+  }
+
+  .user-nav-btn {
+    padding: 9px 10px;
   }
 
   .user-nav-btn span {
@@ -1244,8 +1245,17 @@ body {
     padding: 24px 10px;
   }
 
+  .slider-description {
+    padding: 0 10px;
+  }
+  
+  .slider-social-list {
+    right: 20px;
+  }
+
   .slider-pagination-list {
     bottom: -55px;
+    left: 0;
   }
 
   .contacts-address .button {
@@ -1270,6 +1280,7 @@ body {
 
   .contacts-address {
     padding: 20px;
+    margin: auto;
   }
 
   .delivery-section {
@@ -1278,5 +1289,9 @@ body {
 
   .delivery-form {
     padding: 10px;
+  }
+
+  .footer-links-list {
+    justify-content: center;
   }
 }
