@@ -197,3 +197,9 @@ function burgerOpen() {
   secondLine.classList.toggle("burger-open-second-item");
   thirdLine.classList.toggle("burger-open-third-item");
 }
+
+var search = document.querySelector(".popover-search");
+
+function searchOpen() {
+  search.classList.toggle("popover-opened");
+}

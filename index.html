@@ -58,9 +58,17 @@
             <a href="tel:88005558628" class="user-navigation-link">+7 800 555-86-28</a>
           </li>
           <li class="navigation-item user-navigation-item">
-            <button class="user-nav-btn search-btn" type="button">
+            <button class="user-nav-btn search-btn" type="button" onclick="searchOpen()">
               <span class="visually-hidden">Search.</span>
             </button>
+            <div class="popover popover-search">
+              <form action="https://echo.htmlacademy.ru/" class="search-form">
+                <label for="search" class="visually-hidden">
+                  Поиск.
+                </label>
+                <input name="search for" id="search" type="text" class="search-field" placeholder="Site search">
+              </form>
+            </div>
           </li>
           <li class="navigation-item user-navigation-item">
             <button class="user-nav-btn login-btn" type="button">
