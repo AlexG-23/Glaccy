@@ -186,7 +186,14 @@ function paginationThird() {
 }
 
 var burgerMenu = document.querySelector(".burger-list");
+var firstLine = document.querySelector(".burger-item:nth-of-type(1)");
+var secondLine = document.querySelector(".burger-item:nth-of-type(2)");
+var thirdLine = document.querySelector(".burger-item:nth-of-type(3)");
+
 
 function burgerOpen() {
   burgerMenu.classList.toggle("burger-open");
+  firstLine.classList.toggle("burger-open-first-item");
+  secondLine.classList.toggle("burger-open-second-item");
+  thirdLine.classList.toggle("burger-open-third-item");
 }
