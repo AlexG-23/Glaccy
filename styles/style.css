@@ -226,15 +226,15 @@ body {
 }
 
 .burger-open-first-item {
-  transform: rotate(45deg) translateY(6px);
+  transform: rotate(45deg) translateY(12px);
 }
 
 .burger-open-second-item {
-  display: none;
+  transform: scale(0);
 }
 
 .burger-open-third-item {
-  transform: rotate(-45deg) translateY(-6px);
+  transform: rotate(-45deg) translateY(-12px);
 }
 
 .page-main {
@@ -1060,7 +1060,7 @@ body {
   display: none;
   width: -webkit-fill-available;
   background-color: #fcfcfc;
-  padding: 16px 24px;
+  padding: 24px 16px;
   border-radius: 4px;
 }
 
