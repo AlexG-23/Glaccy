@@ -165,7 +165,7 @@ body {
   display: block;
   width: 15px;
   height: 15px;
-  background-size: 15px 15px;
+  background-size: initial;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -223,6 +223,7 @@ body {
 
 .burger-open {
   display: flex;
+  
 }
 
 .burger-open-first-item {
@@ -1174,6 +1175,10 @@ body {
     transform: translateY(-50%);
   }
 
+  .burger-list .navigation-item:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
   .user-navigation-list {
     max-width: 320px;
     flex-wrap: nowrap;
@@ -1184,11 +1189,22 @@ body {
   }
 
   .user-nav-btn {
-    padding: 9px 10px;
+    border-radius: 50%;
+    padding: 10px;
+    background-position: center;
+    /* background-size: 15px 15px; */
   }
 
   .user-nav-btn span {
     display: none;
+  }
+
+  .login-btn::before {
+    padding: 0;
+  }
+
+  .cart-btn::before {
+    padding: 0;
   }
 
 }
