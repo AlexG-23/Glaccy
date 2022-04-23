@@ -62,24 +62,42 @@
               <span class="visually-hidden">Search.</span>
             </button>
             <div class="popover popover-search">
-              <form action="https://echo.htmlacademy.ru/" class="search-form">
+              <form action="https://echo.htmlacademy.ru/" class="search-form" method="get">
                 <label for="search" class="visually-hidden">
-                  Поиск.
+                  Search.
                 </label>
                 <input name="search for" id="search" type="text" class="search-field" placeholder="Site search">
               </form>
             </div>
           </li>
           <li class="navigation-item user-navigation-item">
-            <button class="user-nav-btn login-btn" type="button">
+            <button class="user-nav-btn login-btn" type="button" onclick="loginOpen()">
               <span>Login</span>
             </button>
+            <div class="popover popover-login">
+              <form action="https://echo.htmlacademy.ru/" class="login-form" method="post">
+                <label for="mail" class="popover-title">Login</label>
+                <input id="mail" type="email" class="login-input" name="e-mail" placeholder="E-mail@example.com" required>
+                <label for="password" class="visually-hidden"></label>
+                <input id="password" type="password" class="login-input" name="password" placeholder="Password" required>
+                <div class="form-buttons">
+                  <button class="button special-btn login-form-btn">Enter</button>
+                  <div class="form-links">
+                    <a href="#" class="login-link">Forgot password?</a>
+                    <a href="#" class="login-link">Registration</a>
+                  </div>
+                </div>
+              </form>
+            </div>
           </li>
           <li class="navigation-item user-navigation-item">
-            <button class="user-nav-btn cart-btn" type="button">
+            <button class="user-nav-btn cart-btn" type="button" onclick="cartOpen()">
               <span>Empty</span>
               <span class="visually-hidden">Cart.</span>
             </button>
+            <div class="popover popover-cart">
+              <h3 class="cart-title">Your cart is empty</h3>
+            </div>
           </li>
         </ul>
       </div>
@@ -95,7 +113,9 @@
             <div class="slide-content-wrapper">
               <h2 class="slider-title">Delicate ice cream with strawberry jam</h1>
               <p class="slider-description">Natural ice cream made from fresh cream and milk with delicious strawberry jam is the perfect dessert for the whole family.</p>
-              <a href="#" class="button slider-order-btn">Order</a>
+              <div class="button-wrapper">
+                <a href="#" class="button main-btn slider-order-btn">Order</a>
+              </div>
             </div>
             <div class="slider-image-wrapper">
               <img src="images/slider-image-1.png" width="306" height="507" alt="Strawberry ice cream." class="slider-image">
@@ -106,7 +126,9 @@
             <div class="slide-content-wrapper">
               <h2 class="slider-title">Banana flavored creamy ice cream</h1>
               <p class="slider-description">Creamy ice cream with a bright banana flavor will give you freshness and enjoyment even on the hottest summer day.</p>
-              <a href="#" class="button slider-order-btn">Order</a>
+              <div class="button-wrapper">
+                <a href="#" class="button main-btn slider-order-btn">Order</a>
+              </div>
             </div>
             <div class="slider-image-wrapper">
               <img src="images/slider-image-2.png" width="306" height="507" alt="Banana ice cream." class="slider-image">
@@ -117,7 +139,9 @@
             <div class="slide-content-wrapper">
               <h2 class="slider-title">Caramel ice cream with marshmallows</h1>
               <p class="slider-description">An unusual sweet dessert with caramel topping and marshmallow pieces will win the hearts of sweet teeth of all ages.</p>
-              <a href="#" class="button slider-order-btn">Order</a>
+              <div class="button-wrapper">
+                <a href="#" class="button main-btn slider-order-btn">Order</a>
+              </div>
             </div>
             <div class="slider-image-wrapper">
               <img src="images/slider-image-3.png" width="306" height="507" alt="Caramel ice cream." class="slider-image">
@@ -188,12 +212,16 @@
           <li class="gifts-item">
             <h4 class="title gift-title">Raspberry for free!</h4>
             <p class="gift-description">When buying 2 kg of any fruit ice cream, we will add a jar of raspberry jam to your order for free.</p>
-            <a href="#" class="button">I want a gift</a>
+            <div class="button-wrapper">
+              <a href="#" class="main-btn button">I want a gift</a>
+            </div>
           </li>
           <li class="gifts-item">
             <h4 class="title gift-title">Marshmallow for free!</h4>
             <p class="gift-description">When buying 2 kg of ice cream, we will add a package of tender marshmallows to your order for free.</p>
-            <a href="#" class="button">I want a gift</a>
+            <div class="button-wrapper">
+              <a href="#" class="main-btn button">I want a gift</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -280,7 +308,7 @@
             <form action="https://echo.htmlacademy.ru/" class="subscribe-form">
               <label for="email">
                 <input id="email" type="email" class="email-input" placeholder="email@example.com" required>
-                <button class="button" type="submit">Send</button>
+                <button class="button special-btn" type="submit">Send</button>
               </label>
             </form>
           </div>
@@ -313,7 +341,7 @@
                 </label>
               </li>
             </ul>
-            <button class="button" type="submit">Send</button>
+            <button class="button special-btn" type="submit">Send</button>
           </fieldset>
         </form>
       </section>
@@ -325,7 +353,7 @@
           <p class="contacts-description">For phone orders:</p>
           <a href="tel:88128121212" class="contacts-content">+7 (812) 812-12-12</a>
           <span>(from 10 to 20 daily)</span>
-          <button class="button" type="submit">Feedback form</button>
+          <button class="button special-btn" type="submit">Feedback form</button>
         </address>
       </section>
     </div>

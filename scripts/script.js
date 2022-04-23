@@ -196,10 +196,86 @@ function burgerOpen() {
   firstLine.classList.toggle("burger-open-first-item");
   secondLine.classList.toggle("burger-open-second-item");
   thirdLine.classList.toggle("burger-open-third-item");
+
+  if (search.classList.contains("popover-opened")) {
+    search.classList.remove("popover-opened");
+    searchBtn.classList.remove("active-btn");
+  }
+  if (cart.classList.contains("popover-opened")) {
+    cart.classList.remove("popover-opened");
+    cartBtn.classList.remove("active-btn");
+  }
+  if (login.classList.contains("popover-opened")) {
+    login.classList.remove("popover-opened");
+    loginBtn.classList.remove("active-btn");
+  }
 }
 
 var search = document.querySelector(".popover-search");
+var searchBtn = document.querySelector(".search-btn");
 
 function searchOpen() {
   search.classList.toggle("popover-opened");
+  searchBtn.classList.toggle("active-btn");
+
+  if (cart.classList.contains("popover-opened")) {
+    cart.classList.remove("popover-opened");
+    cartBtn.classList.remove("active-btn");
+  }
+  if (login.classList.contains("popover-opened")) {
+    login.classList.remove("popover-opened");
+    loginBtn.classList.remove("active-btn");
+  }
+  if (burgerMenu.classList.contains("burger-open")) {
+    burgerMenu.classList.remove("burger-open");
+    firstLine.classList.remove("burger-open-first-item");
+    secondLine.classList.remove("burger-open-second-item");
+    thirdLine.classList.remove("burger-open-third-item");
+  }
+}
+
+var login = document.querySelector(".popover-login");
+var loginBtn = document.querySelector(".login-btn");
+
+function loginOpen() {
+  login.classList.toggle("popover-opened");
+  loginBtn.classList.toggle("active-btn");
+  
+  if (search.classList.contains("popover-opened")) {
+    search.classList.remove("popover-opened");
+    searchBtn.classList.remove("active-btn");
+  }
+  if (cart.classList.contains("popover-opened")) {
+    cart.classList.remove("popover-opened");
+    cartBtn.classList.remove("active-btn");
+  }
+  if (burgerMenu.classList.contains("burger-open")) {
+    burgerMenu.classList.remove("burger-open");
+    firstLine.classList.remove("burger-open-first-item");
+    secondLine.classList.remove("burger-open-second-item");
+    thirdLine.classList.remove("burger-open-third-item");
+  }
+}
+
+var cart = document.querySelector(".popover-cart");
+var cartBtn = document.querySelector(".cart-btn");
+
+function cartOpen() {
+  cart.classList.toggle("popover-opened");
+  cartBtn.classList.toggle("active-btn");
+
+  if (search.classList.contains("popover-opened")) {
+    search.classList.remove("popover-opened");
+    searchBtn.classList.remove("active-btn");
+  }
+  if (login.classList.contains("popover-opened")) {
+    login.classList.remove("popover-opened");
+    loginBtn.classList.remove("active-btn");
+  }
+  if (burgerMenu.classList.contains("burger-open")) {
+    burgerMenu.classList.remove("burger-open");
+    firstLine.classList.remove("burger-open-first-item");
+    secondLine.classList.remove("burger-open-second-item");
+    thirdLine.classList.remove("burger-open-third-item");
+  }
 }
