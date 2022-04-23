@@ -373,7 +373,8 @@ body {
 
 .slider-pagination-list {
   position: absolute;
-  left: -40px;
+  bottom: -55px;
+  padding: 0;
   display: flex;
   list-style-type: none;
 }
@@ -399,6 +400,7 @@ body {
 .slider-social-list {
   position: absolute;
   right: 0;
+  padding: 0;
   bottom: -60px;
   display: flex;
   list-style-type: none;
@@ -1263,8 +1265,8 @@ body {
 
   .slider-buttons-wrapper {
     top: 110px;
-    left: 11%;
-    width: 80%;
+    left: 50%;
+    margin-left: -174px;
   }
 
   .slider-title {
@@ -1289,8 +1291,7 @@ body {
   }
 }
 
-@media (max-width:460px) {
-
+@media (max-width:480px) {
   body {
     padding: 24px 10px;
   }
@@ -1301,18 +1302,31 @@ body {
     transform: translateX(20%);
   }
 
+  .slide-active {
+    gap: 150px;
+  }
+
   .slider-description {
     padding: 0 10px;
   }
   
   .slider-social-list {
     right: 20px;
+    bottom: 16px;
   }
 
   .slider-pagination-list {
-    top: 285px;
+    top: 300px;
     left: 50%;
-    transform: translateX(-71%);
+    margin-left: -26px;
+  }
+
+  .slider-order-btn {
+    margin-left: -60%;
+  }
+
+  .gifts-section .section-title {
+    margin-top: -140px;
   }
 
   .contacts-address .button {
