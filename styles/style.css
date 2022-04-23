@@ -1312,7 +1312,7 @@ body {
   .slider-pagination-list {
     top: 285px;
     left: 50%;
-    transform: translateX(-72%);
+    transform: translateX(-71%);
   }
 
   .contacts-address .button {
