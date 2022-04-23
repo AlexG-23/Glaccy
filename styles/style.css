@@ -375,7 +375,6 @@ body {
   position: absolute;
   left: -40px;
   display: flex;
-  width: 52px;
   list-style-type: none;
 }
 
@@ -1311,8 +1310,9 @@ body {
   }
 
   .slider-pagination-list {
-    bottom: -55px;
-    left: 0;
+    top: 285px;
+    left: 50%;
+    transform: translateX(-72%);
   }
 
   .contacts-address .button {
