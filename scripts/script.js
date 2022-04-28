@@ -1,19 +1,21 @@
 
-var firstSlide = document.querySelector(".slider-item:nth-child(1)");
-var secondSlide = document.querySelector(".slider-item:nth-child(2)");
-var thirdSlide = document.querySelector(".slider-item:nth-child(3)");
+let firstSlide = document.querySelector(".slider-item:nth-child(1)");
+let secondSlide = document.querySelector(".slider-item:nth-child(2)");
+let thirdSlide = document.querySelector(".slider-item:nth-child(3)");
 
-var bulletFirst = document.querySelector(".slider-pagination-item:nth-child(1) .slider-pagination-btn");
-var bulletSecond = document.querySelector(".slider-pagination-item:nth-child(2) .slider-pagination-btn");
-var bulletThird = document.querySelector(".slider-pagination-item:nth-child(3) .slider-pagination-btn");
+let bulletFirst = document.querySelector(".slider-pagination-item:nth-child(1) .slider-pagination-btn");
+let bulletSecond = document.querySelector(".slider-pagination-item:nth-child(2) .slider-pagination-btn");
+let bulletThird = document.querySelector(".slider-pagination-item:nth-child(3) .slider-pagination-btn");
 
+let firstLittleSlide = document.querySelector(".second-slide");
+let secondLittleSlide = document.querySelector(".third-slide");
+let thirdLittleSlide = document.querySelector(".first-slide");
 
-var firstLittleSlide = document.querySelector(".second-slide");
-var secondLittleSlide = document.querySelector(".third-slide");
+let firstBodyBackground = document.querySelector(".body-first-slide");
+let secondBodyBackground = document.querySelector(".body-second-slide");
+let thirdBodyBackground = document.querySelector(".body-third-slide");
 
-var bodyBackground = document.querySelector(".body-first-slide");
-
-function nextSlide() {
+function toNextSlide() {
   if (firstSlide.classList.contains("slide-active")) {
     firstSlide.classList.remove("slide-active");
     secondSlide.classList.add("slide-active");
@@ -27,8 +29,8 @@ function nextSlide() {
     bulletFirst.classList.remove("slider-pagination-active");
     bulletSecond.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-first-slide");
-    bodyBackground.classList.add("body-second-slide");
+    firstBodyBackground.classList.remove("body-first-slide");
+    firstBodyBackground.classList.add("body-second-slide");
     
   } 
   else if (secondSlide.classList.contains("slide-active")) {
@@ -44,8 +46,8 @@ function nextSlide() {
     bulletSecond.classList.remove("slider-pagination-active");
     bulletThird.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-second-slide");
-    bodyBackground.classList.add("body-third-slide");
+    firstBodyBackground.classList.remove("body-second-slide");
+    firstBodyBackground.classList.add("body-third-slide");
   } 
   else {
     thirdSlide.classList.remove("slide-active");
@@ -60,12 +62,12 @@ function nextSlide() {
     bulletThird.classList.remove("slider-pagination-active");
     bulletFirst.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-third-slide");
-    bodyBackground.classList.add("body-first-slide");
+    firstBodyBackground.classList.remove("body-third-slide");
+    firstBodyBackground.classList.add("body-first-slide");
   }
 }
 
-function prevSlide() {
+function toPrevSlide() {
   if (firstSlide.classList.contains("slide-active")) {
     firstSlide.classList.remove("slide-active");
     thirdSlide.classList.add("slide-active");
@@ -79,8 +81,8 @@ function prevSlide() {
     bulletFirst.classList.remove("slider-pagination-active");
     bulletThird.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-first-slide");
-    bodyBackground.classList.add("body-third-slide");
+    firstBodyBackground.classList.remove("body-first-slide");
+    firstBodyBackground.classList.add("body-third-slide");
   } 
   else if (secondSlide.classList.contains("slide-active")) {
     secondSlide.classList.remove("slide-active");
@@ -95,8 +97,8 @@ function prevSlide() {
     bulletSecond.classList.remove("slider-pagination-active");
     bulletFirst.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-second-slide");
-    bodyBackground.classList.add("body-first-slide");
+    firstBodyBackground.classList.remove("body-second-slide");
+    firstBodyBackground.classList.add("body-first-slide");
   } 
   else {
     thirdSlide.classList.remove("slide-active");
@@ -111,8 +113,8 @@ function prevSlide() {
     bulletThird.classList.remove("slider-pagination-active");
     bulletSecond.classList.add("slider-pagination-active");
 
-    bodyBackground.classList.remove("body-third-slide");
-    bodyBackground.classList.add("body-second-slide");
+    firstBodyBackground.classList.remove("body-third-slide");
+    firstBodyBackground.classList.add("body-second-slide");
   }
 }
 
@@ -122,9 +124,9 @@ function paginationFirst() {
   bulletSecond.classList.remove("slider-pagination-active");
   bulletThird.classList.remove("slider-pagination-active");
 
-  bodyBackground.classList.remove("body-second-slide");
-  bodyBackground.classList.remove("body-third-slide");
-  bodyBackground.classList.add("body-first-slide");
+  firstBodyBackground.classList.remove("body-second-slide");
+  firstBodyBackground.classList.remove("body-third-slide");
+  firstBodyBackground.classList.add("body-first-slide");
 
   firstSlide.classList.add("slide-active");
   secondSlide.classList.remove("slide-active");
@@ -145,9 +147,9 @@ function paginationSecond() {
   bulletSecond.classList.add("slider-pagination-active");
   bulletThird.classList.remove("slider-pagination-active");
 
-  bodyBackground.classList.add("body-second-slide");
-  bodyBackground.classList.remove("body-third-slide");
-  bodyBackground.classList.remove("body-first-slide");
+  firstBodyBackground.classList.add("body-second-slide");
+  firstBodyBackground.classList.remove("body-third-slide");
+  firstBodyBackground.classList.remove("body-first-slide");
 
   firstSlide.classList.remove("slide-active");
   secondSlide.classList.add("slide-active");
@@ -168,9 +170,9 @@ function paginationThird() {
   bulletSecond.classList.remove("slider-pagination-active");
   bulletThird.classList.add("slider-pagination-active");
 
-  bodyBackground.classList.remove("body-second-slide");
-  bodyBackground.classList.add("body-third-slide");
-  bodyBackground.classList.remove("body-first-slide");
+  firstBodyBackground.classList.remove("body-second-slide");
+  firstBodyBackground.classList.add("body-third-slide");
+  firstBodyBackground.classList.remove("body-first-slide");
 
   firstSlide.classList.remove("slide-active");
   secondSlide.classList.remove("slide-active");
@@ -185,10 +187,10 @@ function paginationThird() {
   secondLittleSlide.classList.add("second-slide");
 }
 
-var burgerMenu = document.querySelector(".burger-list");
-var firstLine = document.querySelector(".burger-item:nth-of-type(1)");
-var secondLine = document.querySelector(".burger-item:nth-of-type(2)");
-var thirdLine = document.querySelector(".burger-item:nth-of-type(3)");
+let burgerMenu = document.querySelector(".burger-list");
+let firstLine = document.querySelector(".burger-item:nth-of-type(1)");
+let secondLine = document.querySelector(".burger-item:nth-of-type(2)");
+let thirdLine = document.querySelector(".burger-item:nth-of-type(3)");
 
 
 function burgerOpen() {
@@ -211,8 +213,8 @@ function burgerOpen() {
   }
 }
 
-var search = document.querySelector(".popover-search");
-var searchBtn = document.querySelector(".search-btn");
+let search = document.querySelector(".popover-search");
+let searchBtn = document.querySelector(".search-btn");
 
 function searchOpen() {
   search.classList.toggle("popover-opened");
@@ -234,8 +236,8 @@ function searchOpen() {
   }
 }
 
-var login = document.querySelector(".popover-login");
-var loginBtn = document.querySelector(".login-btn");
+let login = document.querySelector(".popover-login");
+let loginBtn = document.querySelector(".login-btn");
 
 function loginOpen() {
   login.classList.toggle("popover-opened");
@@ -257,8 +259,8 @@ function loginOpen() {
   }
 }
 
-var cart = document.querySelector(".popover-cart");
-var cartBtn = document.querySelector(".cart-btn");
+let cart = document.querySelector(".popover-cart");
+let cartBtn = document.querySelector(".cart-btn");
 
 function cartOpen() {
   cart.classList.toggle("popover-opened");
