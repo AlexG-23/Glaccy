@@ -4,9 +4,467 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Catalog</title>
 </head>
-<body>
-    
+<body class="body-first-slide">
+  <header class="page-header">
+    <div class="container">
+      <nav class="main-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a href="index.html" class="main-logo">
+                <span class="visually-hidden">Glaccy's logo</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html" class="navigation-link active-page">Catalog</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Delivery and payment</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">About us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger-nav">
+        <button class="burger-btn" type="button" onclick="burgerOpen()">
+          <span class="burger-item"></span>
+          <span class="burger-item"></span>
+          <span class="burger-item"></span>
+        </button>
+        <ul class="burger-list">
+          <li class="navigation-item">
+            <a href="index.html" class="main-logo">
+                <span class="visually-hidden">Glaccy's logo</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a href="catalog.html" class="navigation-link">Catalog</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">Delivery and payment</a>
+          </li>
+          <li class="navigation-item">
+            <a href="#" class="navigation-link">About us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="user-navigation">
+        <ul class="navigation-list user-navigation-list">
+          <li class="navigation-item user-navigation-item">
+            <a href="tel:88005558628" class="user-navigation-link">+7 800 555-86-28</a>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn search-btn" type="button" onclick="searchOpen()">
+              <span class="visually-hidden">Search.</span>
+            </button>
+            <div class="popover popover-search">
+              <form action="https://echo.htmlacademy.ru/" class="search-form" method="get">
+                <label for="search" class="visually-hidden">
+                  Search.
+                </label>
+                <input name="search for" id="search" type="text" class="search-field" placeholder="Site search">
+              </form>
+            </div>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn login-btn" type="button" onclick="loginOpen()">
+              <span>Login</span>
+            </button>
+            <div class="popover popover-login">
+              <form action="https://echo.htmlacademy.ru/" class="login-form" method="post">
+                <label for="mail" class="popover-title">Login</label>
+                <input id="mail" type="email" class="login-input" name="e-mail" placeholder="E-mail@example.com" required>
+                <label for="password" class="visually-hidden"></label>
+                <input id="password" type="password" class="login-input" name="password" placeholder="Password" required>
+                <div class="form-buttons">
+                  <button class="button special-btn login-form-btn">Enter</button>
+                  <div class="form-links">
+                    <a href="#" class="login-link">Forgot password?</a>
+                    <a href="#" class="login-link">Registration</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+          <li class="navigation-item user-navigation-item">
+            <button class="user-nav-btn cart-btn" type="button" onclick="cartOpen()">
+              <span>2 items</span>
+              <span class="visually-hidden">Cart.</span>
+            </button>
+            <div class="popover popover-cart">
+              <h3 class="cart-title">Cart</h3>
+              <ul class="cart-list">
+                <li class="cart-item">
+                  <img src="images/popular-1.png" width="46" height="46" alt="Raspberry ice cream" class="cart-item-image">
+                  <p class="cart-item-name">Raspberry</p>
+                  <span class="cart-item-price">1 kg x 310 ₽</span>
+                  <span class="cart-item-total-price">310 ₽</span>
+                  <button class="cart-remove-btn" type="button">
+                    <span class="visually-hidden">Remove from cart.</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <img src="images/popular-4.png" width="46" height="46" alt="Bubble gum" class="cart-item-image">
+                  <p class="cart-item-name">Bubble gum</p>
+                  <span class="cart-item-price">1,5 кг х 320 ₽</span>
+                  <span class="cart-item-total-price">480 ₽</span>
+                  <button class="cart-remove-btn" type="button">
+                    <span class="visually-hidden">Remove from cart.</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="cart-checkout">
+                <button class="button special-btn">Checkout</button>
+                <p class="cart-total-price">Total: 790 ₽</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="catalog-main">
+    <section class="breadcrumbs-section">
+      <h2 class="visually-hidden">Breadcrumbs navigation.</h2>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a href="index.html" class="breadcrumbs-link">Main</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link">Catalog</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link breadcrumbs-link-active">Creamy</a>
+        </li>
+      </ul>
+    </section>
+    <section class="sorting-section">
+      <h2 class="section-title">Creamy ice cream</h2>
+      <form class="sorting-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="sort-item">
+          <label class="sorting-label" for="sorting-by">Sorting by:</label>
+          <select name="sort by" id="sorting-by">
+            <option value="Popular">by popular</option>
+            <option value="Price">by price</option>
+            <option value="Fats">by fats</option>
+          </select>
+        </fieldset>
+        <fieldset class="sort-item">
+          <label class="sorting-label" for="price">Price: 100 ₽ – 500 ₽</label>
+          <div class="range-wrapper">
+            <span class="range-scale"></span>
+            <div class="range-bar">
+              <div class="range-toggle-wrapper left-toggle">
+                <button class="range-toggle toggle-min" type="button">
+                  <span class="visually-hidden">Change minimal price.</span>
+                </button>
+                <label class="range-label min-label" for="lowest-price"></label>
+              </div>
+              <div class="range-toggle-wrapper right-toggle">
+                <button class="range-toggle toggle-max" type="button">
+                  <span class="visually-hidden">Change maximal price.</span>
+                </button>
+                <label class="range-label max-label" for="highest-price"></label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="sort-item">
+          <label class="sorting-label" for="price">Fat:</label>
+          <ul class="fat-list">
+            <li class="filters-item">
+              <label for="zero-fats">
+                <input type="radio" id="zero-fats" value="0 percent" name="percent of fat" class="fats-input visually-hidden">
+                <span class="fats-mark"></span>
+                <span class="fats-label">0%</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="under-ten-fats">
+                <input type="radio" id="under-ten-fats" value="under 10 percent" name="percent of fat" class="fats-input visually-hidden" checked>
+                <span class="fats-mark"></span>
+                <span class="fats-label">Under 10%</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="under-thirty-fats">
+                <input type="radio" id="under-thirty-fats" value="under 30 percent" name="percent of fat" class="fats-input visually-hidden">
+                <span class="fats-mark"></span>
+                <span class="fats-label">Under 30%</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="above-thirty-fats">
+                <input type="radio" id="above-thirty-fats" value="above 30 percent" name="percent of fat" class="fats-input visually-hidden">
+                <span class="fats-mark"></span>
+                <span class="fats-label">Above 30%</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="sort-item">
+          <label class="sorting-label" for="price">Toppings:</label>
+          <ul class="toppings-list">
+            <li class="filters-item">
+              <label for="chocolate">
+                <input type="checkbox" id="chocolate" name="chocolate" class="toppings-input visually-hidden" checked>
+                <span class="toppings-mark"></span>
+                <span class="toppings-label">Chocolate</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="sugar-sprinkles">
+                <input type="checkbox" id="sugar-sprinkles" name="sugar sprinkles" class="toppings-input visually-hidden" checked>
+                <span class="toppings-mark"></span>
+                <span class="toppings-label">Sugar sprinkles</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="fruits">
+                <input type="checkbox" id="fruits" name="fruits" class="toppings-input visually-hidden">
+                <span class="toppings-mark"></span>
+                <span class="toppings-label">Fruits</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="syrups">
+                <input type="checkbox" id="syrups" name="syrups" class="toppings-input visually-hidden">
+                <span class="toppings-mark"></span>
+                <span class="toppings-label">Syrups</span>
+              </label>
+            </li>
+            <li class="filters-item">
+              <label for="jams">
+                <input type="checkbox" id="jams" name="jams" class="toppings-input visually-hidden">
+                <span class="toppings-mark"></span>
+                <span class="toppings-label">Jams</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <button class="form-btn" type="submit">Submit</button>
+      </form>
+    </section>
+    <section class="catalog-section">
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <h2 class="product-title">Raspberry</h2>
+          <p class="product-description">Ice cream with raspberry jam</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">310 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Pistachio</h2>
+          <p class="product-description">Pistachio ice cream with pieces of chocolate</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">340 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Blueberry</h2>
+          <p class="product-description">Creme brulee with blackberry jam</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">330 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Bubble gum</h2>
+          <p class="product-description">Vanilla ice cream with sweet sprinkles</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">320 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Blackberry</h2>
+          <p class="product-description">Ice cream with blackberry jam</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">330 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Banana</h2>
+          <p class="product-description">Ice cream with banana taste</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">340 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Chocolate</h2>
+          <p class="product-description">Classic chocolate ice cream</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">270 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Strawberry</h2>
+          <p class="product-description">Ice cream with strawberry taste</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">300 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Lemon</h2>
+          <p class="product-description">Fresh lemon sherbet</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">310 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Menthol</h2>
+          <p class="product-description">Ice cream with menthol syrup</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">320 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Nuts</h2>
+          <p class="product-description">Pistachio ice cream with chocolate syrup</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">360 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+        <li class="catalog-item">
+          <h2 class="product-title">Creme brulee</h2>
+          <p class="product-description">Classic creme brulee</p>
+          <div class="price-btn-wrapper">
+            <span class="product-price">280 ₽/kg</span>
+            <button class="to-cart-btn" type="button">
+                <svg width="17" height="16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.313.49a.667.667 0 0 0 0 1.333h2.06l.54 2.696a.662.662 0 0 0 .011.056l1.09 5.44a1.97 1.97 0 0 0 1.962 1.586h6.325a1.97 1.97 0 0 0 1.963-1.586l.001-.005 1.043-5.47a.667.667 0 0 0-.655-.791H5.12l-.545-2.724A.667.667 0 0 0 3.92.49H1.313ZM6.32 9.754l-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.958a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Zm7.17 0a1.318 1.318 0 1 1 2.636 0 1.318 1.318 0 0 1-2.637 0Z" fill=""/></svg>
+                <span class="visually-hidden">Add to cart.</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="button-wrapper">
+        <button class="button main-btn" type="button">Show more</button>
+      </div>
+
+      <ul class="pagination-list">
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">
+            <span class="visually-hidden">To previous page.</span>
+          </a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link pagination-active">1</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">2</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">3</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">4</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">5</a>
+        </li>
+        <li class="pagination-item">
+          <a href="#" class="pagination-link">
+            <span class="visually-hidden">To next page.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="first-column-wrapper">
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a href="https://vk.com/htmlacademy" class="footer-social-btn">
+              <span class="visually-hidden">Vkontakte</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="https://www.facebook.com/htmlacademy" class="footer-social-btn">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a href="https://www.instagram.com/htmlacademy/" class="footer-social-btn">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="second-column-wrapper">
+        <ul class="footer-links-list">
+          <li class="footer-links-item">
+            <a href="#" class="footer-link">For suppliers</a>
+          </li>
+          <li class="footer-links-item">
+            <a href="#" class="footer-link">Our Documents</a>
+          </li>
+          <li class="footer-links-item">
+            <a href="#" class="footer-link">About production</a>
+          </li>
+          <li class="footer-links-item">
+            <a href="#" class="footer-link">Environmental standards</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="third-column-wrapper">
+        <a href="https://htmlacademy.ru/" class="html-academy-logo">
+          <span class="visually-hidden">.html academy</span>
+        </a>
+        <span>Made in <a href="https://htmlacademy.ru/">.html academy</a> © 2021</span>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
