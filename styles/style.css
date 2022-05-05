@@ -1568,7 +1568,8 @@ body {
 
 .catalog-item {
   position: relative;
-  height: -webkit-fill-available;
+  height: min-content;
+  min-height: 285px;
   width: -webkit-fill-available;
 
   display: flex;
