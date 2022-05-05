@@ -191,10 +191,11 @@ let burgerMenu = document.querySelector(".burger-list");
 let firstLine = document.querySelector(".burger-item:nth-of-type(1)");
 let secondLine = document.querySelector(".burger-item:nth-of-type(2)");
 let thirdLine = document.querySelector(".burger-item:nth-of-type(3)");
-
+let page = document.querySelector(".page-main");
 
 function burgerOpen() {
   burgerMenu.classList.toggle("burger-open");
+  page.classList.toggle("page-burger-opened");
   firstLine.classList.toggle("burger-open-first-item");
   secondLine.classList.toggle("burger-open-second-item");
   thirdLine.classList.toggle("burger-open-third-item");
