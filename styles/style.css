@@ -1184,6 +1184,7 @@ body {
 
 .popover-cart {
   max-width: 440px;
+  min-width: 360px;
   position: absolute;
   right: 0;
   top: 45px;
