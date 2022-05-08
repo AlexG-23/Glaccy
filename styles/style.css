@@ -1977,6 +1977,10 @@ body {
   .toppings-list .filters-item:first-of-type {
     margin-bottom: 15px;
   }
+
+  .cart-item-name {
+    font-size: 15px;
+  }
 }
 
 
