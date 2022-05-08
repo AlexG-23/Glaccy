@@ -2018,6 +2018,10 @@ body {
     right: 0;
   }
 
+  .popover-cart {
+    right: -25px;
+  }
+
   .slide-active {
     gap: 120px;
   }
