@@ -1981,8 +1981,14 @@ body {
   .cart-item-name {
     font-size: 15px;
   }
-}
 
+  .catalog-item .product-title::before {
+    width: 100px;
+    height: 100px;
+    background-size: 100px 100px;
+    top: -15%;
+  }
+}
 
 @media (max-width: 500px) {
 
@@ -2102,12 +2108,6 @@ body {
   .product-price {
     font-size: 12px;
     line-height: 14px;
-  }
-  .catalog-item .product-title::before {
-    width: 100px;
-    height: 100px;
-    background-size: 100px 100px;
-    top: -15%;
   }
   
   .footer-links-list {
